@@ -6,10 +6,12 @@ qProps.testList = {
   },
   qListObjectDef: {
     qDef: {
-      qFieldDefs: ['Product Group Desc'],
+      qFieldDefs: ['Year'],
     },
     qShowAlternatives: true,
-    qAutoSortByState: { qDisplayNumberOfRows: 1 },
+    qAutoSortByState: {
+      qDisplayNumberOfRows: 1,
+    },
   },
 };
 
@@ -20,20 +22,28 @@ qProps.testCube = {
   qHyperCubeDef: {
     qDimensions: [{
       qDef: {
-        qFieldDefs: ['Product Group Desc'],
-        qFieldLabels: ['Product'],
-        qSortCriterias: [{ qSortByAscii: 1 }],
+        qFieldDefs: ['Year'],
+        qFieldLabels: ['Years'],
+        qSortCriterias: [{
+          qSortByAscii: 1,
+        }],
       },
     }],
     qMeasures: [{
       qDef: {
-        qDef: 'Sum([Sales Amount])',
-        qLabel: 'Sales',
+        qDef: 'Avg([Accceleration 0-60])',
+        qLabel: 'Average',
         qNumFormat: {
-          qType: 'M', qUseThou: 1, qDec: '.', qThou: ',', qFmt: '$#,##0.00;($#,##0.00)',
+          qType: 'M',
+          qUseThou: 1,
+          qDec: '.',
+          qThou: ',',
+          qFmt: '$#,##0.00;($#,##0.00)',
         },
       },
-      qSortBy: { qSortByNumeric: -1 },
+      qSortBy: {
+        qSortByNumeric: -1,
+      },
     }],
   },
 };
