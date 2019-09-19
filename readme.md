@@ -1,3 +1,5 @@
+WORKS ON QLIK SENSE DESKTOP!!!
+
 # Qlik React Starter
 
 This is a starter template for creating projects powered by Qlik using enigma.js and React.
